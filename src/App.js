@@ -1,25 +1,28 @@
 import React, { Component } from "react";
+
 import logo from "./logo.svg";
 import "./App.css";
 
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Tabs from "./Components/Tab/Tabs";
+require("./Components/Tab/style.css");
 
 class App extends Component {
   render() {
     return (
-      <Tabs>
-        <TabList>
-          <Tab>Title 1</Tab>
-          <Tab>Title 2</Tab>
-        </TabList>
-
-        <TabPanel>
-          <h2>Any content 1</h2>
-        </TabPanel>
-        <TabPanel>
-          <h2>Any content 2</h2>
-        </TabPanel>
-      </Tabs>
+      <div className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+          <h1>Tabs Demo</h1>
+          <Tabs>
+            <div label="KuyHorm">
+              Ha sue dai nai ta lat Vee la, <em>10.000</em>!
+            </div>
+            <div label="HoiWarn">
+              HoiWarn U Laos bor me, Pai sue u<br /> <em>BarzaarBee</em>!
+            </div>
+          </Tabs>
+        </div>
+      </div>
     );
   }
 }
